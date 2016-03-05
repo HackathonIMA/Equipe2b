@@ -6,5 +6,6 @@ class HealthCareTest < ActiveSupport::TestCase
   end
 
   should validate_presence_of(:locale_id)
+  should validate_uniqueness(:origin_id)
   should belong_to(:locale)
 end
