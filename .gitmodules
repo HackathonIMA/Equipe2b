@@ -1,0 +1,3 @@
+[submodule "smsc-web"]
+	path = smsc-web
+	url = git@github.com:IMA-Hackathon-Boots/smsc-web.git
