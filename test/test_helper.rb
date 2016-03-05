@@ -4,7 +4,7 @@ require 'rails/test_help'
 require 'minitest/rails'
 require 'minitest/autorun'
 require 'minitest/reporters'
-
+require 'shoulda/matchers'
 Dir[Rails.root.join('test/support/**/*.rb')].each { |f| require f }
 
 Minitest::Reporters.use!(

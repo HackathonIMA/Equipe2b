@@ -33,6 +33,6 @@ group :test do
   gem 'minitest-reporters'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'shoulda'
-  gem 'shoulda-matchers'
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
 end

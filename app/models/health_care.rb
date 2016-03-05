@@ -41,4 +41,5 @@
 
 class HealthCare < ActiveRecord::Base
   belongs_to :locale
+  validates :locale_id, presence: true
 end

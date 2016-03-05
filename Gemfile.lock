@@ -171,8 +171,8 @@ DEPENDENCIES
   rack-cors
   rails (~> 4.2.5)
   rails-api
-  shoulda
-  shoulda-matchers
+  shoulda (~> 3.5)
+  shoulda-matchers (~> 2.0)
   spring
   thin
 

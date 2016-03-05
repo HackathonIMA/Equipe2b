@@ -13,4 +13,5 @@
 #
 
 class Locale < ActiveRecord::Base
+  has_many :health_cares
 end
