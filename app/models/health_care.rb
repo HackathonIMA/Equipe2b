@@ -42,4 +42,9 @@
 class HealthCare < ActiveRecord::Base
   belongs_to :locale
   validates :locale_id, presence: true
+
+  delegate :distrito_vinculo,
+           :local_atendimento,
+           :distrito_atendimento,
+           to: :locale
 end

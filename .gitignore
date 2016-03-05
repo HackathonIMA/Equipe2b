@@ -50,3 +50,6 @@ build/
 config/database.yml
 config/secrets.yml
 tags
+
+.rake_tasks
+.ruby-gemset
