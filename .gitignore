@@ -48,4 +48,5 @@ build/
 !/log/.keep
 
 config/database.yml
+config/secrets.yml
 tags

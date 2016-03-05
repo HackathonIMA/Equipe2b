@@ -19,17 +19,20 @@ gem 'fast_blank'
 # cros over request
 gem 'rack-cors', :require => 'rack/cors'
 
-group :development do
+group :development, :test do
   gem 'spring'
   gem 'pry-byebug'
   gem 'awesome_print'
   gem 'thin'
+  gem 'annotate'
 end
 
 
 group :test do
-  gem 'minitest-rails', require: false
+  gem "minitest-rails"
   gem 'minitest-reporters'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 end
