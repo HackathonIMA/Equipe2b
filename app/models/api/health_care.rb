@@ -6,13 +6,12 @@ module API
     headers  "client_id" => Rails.application.secrets.api['client_id']
 
     def self.extract(options = {})
-      binding.pry
       default_range = { offset: 1, limit: 100 }
       filters = default_range.merge options
       req = get "/saude", query: filters
 
-      return unless req.response.code == '200'
-      JSON.parse(req.response.body, symbolize_names: true)
+      return false unless req.response.code == '200'
+      parse_body JSON.parse(req.response.body, symbolize_names: true)
     end
 
     def self.parse_body(health_cares)
