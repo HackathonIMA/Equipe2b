@@ -30,6 +30,7 @@
 # Indexes
 #
 #  index_health_cares_on_codigo_procedimento_sus  (codigo_procedimento_sus)
+#  index_health_cares_on_data_atendimento         (data_atendimento)
 #  index_health_cares_on_descricao_procedimento   (descricao_procedimento)
 #  index_health_cares_on_locale_id                (locale_id)
 #  index_health_cares_on_origin_id                (origin_id)
@@ -43,9 +44,4 @@ class HealthCare < ActiveRecord::Base
   belongs_to :locale
   validates :locale_id, presence: true
   validates :origin_id, uniqueness: true
-
-  delegate :distrito_vinculo,
-           :local_atendimento,
-           :distrito_atendimento,
-           to: :locale
 end

@@ -52,7 +52,7 @@ module API
 
     def test_parse_health_care_correct_locale
       health_care = API::HealthCare.send(:parse_health_care, @health_care_json)
-      assert_equal @health_care_json[:distritoAtendimento], health_care.distrito_atendimento
+      assert_equal @health_care_json[:distritoAtendimento], health_care.locale.distrito_atendimento
     end
   end
 end

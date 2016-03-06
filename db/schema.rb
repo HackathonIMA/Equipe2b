@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305164811) do
+ActiveRecord::Schema.define(version: 20160306021631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160305164811) do
   end
 
   add_index "health_cares", ["codigo_procedimento_sus"], name: "index_health_cares_on_codigo_procedimento_sus", using: :btree
+  add_index "health_cares", ["data_atendimento"], name: "index_health_cares_on_data_atendimento", using: :btree
   add_index "health_cares", ["descricao_procedimento"], name: "index_health_cares_on_descricao_procedimento", using: :btree
   add_index "health_cares", ["locale_id"], name: "index_health_cares_on_locale_id", using: :btree
   add_index "health_cares", ["origin_id"], name: "index_health_cares_on_origin_id", using: :btree
@@ -53,8 +54,9 @@ ActiveRecord::Schema.define(version: 20160305164811) do
     t.string   "distrito_atendimento"
     t.float    "lat"
     t.float    "lng"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "capacidade_atendimento"
   end
 
   add_foreign_key "health_cares", "locales"
