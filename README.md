@@ -1,1 +1,2 @@
-# SMSC API [![Build Status](https://semaphoreci.com/api/v1/ricsdeol/smsc-api/branches/master/badge.svg)](https://semaphoreci.com/ricsdeol/smsc-api)
+# SMSC API
+[![Build Status](https://semaphoreci.com/api/v1/ricsdeol/smsc-api/branches/master/badge.svg)](https://semaphoreci.com/ricsdeol/smsc-api) [![Code Climate](https://codeclimate.com/github/IMA-Hackathon-Boots/smsc-api/badges/gpa.svg)](https://codeclimate.com/github/IMA-Hackathon-Boots/smsc-api)[![Issue Count](https://codeclimate.com/github/IMA-Hackathon-Boots/smsc-api/badges/issue_count.svg)](https://codeclimate.com/github/IMA-Hackathon-Boots/smsc-api)
