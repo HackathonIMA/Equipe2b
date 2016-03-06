@@ -2,8 +2,8 @@ module API
   class HealthCare
     include HTTParty
 
-    base_uri  Rails.application.secrets.api['base_uri']
-    headers  "client_id" => Rails.application.secrets.api['client_id']
+    base_uri Rails.application.secrets.api['base_uri']
+    headers "client_id" => Rails.application.secrets.api['client_id']
 
     def self.extract(options = {})
       default_range = { offset: 1, limit: 100 }
