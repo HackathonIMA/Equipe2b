@@ -43,5 +43,5 @@
 class HealthCare < ActiveRecord::Base
   belongs_to :locale
   validates :locale_id, presence: true
-  validates :origin_id, uniqueness: true
+  validates :origin_id, uniqueness: true, if: 'origin_id.present?'
 end
