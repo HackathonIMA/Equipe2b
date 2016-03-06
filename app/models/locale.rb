@@ -15,4 +15,5 @@
 
 class Locale < ActiveRecord::Base
   has_many :health_cares
+  has_many :histories, -> { where('year > 2012')}, class_name: HealthCare::History
 end
