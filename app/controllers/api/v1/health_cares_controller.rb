@@ -3,8 +3,8 @@ module API
     class HealthCaresController < ApplicationController
 
       def history
-        year = params[:year] || 2015
-        @histories = ::HealthCare::History.eager_load(:locale).
+        year = params[:year] || 2013
+        @histories = ::HealthCare::History.joins(:locale).preload(:locale).
                       where('locales.lat is not null').
                       where('year  >= ?', year)
         render json: @histories, each_serializer: ::HealthCareHistorySerializer
