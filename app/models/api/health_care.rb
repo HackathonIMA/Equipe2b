@@ -15,7 +15,9 @@ module API
     end
 
     def self.parse_body(health_cares)
-      health_cares.each {|health_care| parse_health_care health_care}
+      ::HealthCare.transaction do
+        health_cares.each {|health_care| parse_health_care health_care}
+      end
     end
     private_class_method :parse_body
 
