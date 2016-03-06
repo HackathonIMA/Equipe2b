@@ -16,17 +16,16 @@ gem 'httparty'
 #performance
 gem 'fast_blank'
 
-# cros over request
-gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'spring'
   gem 'pry-byebug'
   gem 'awesome_print'
-  gem 'thin'
   gem 'annotate'
 end
 
+gem 'thin'
+gem 'rack-cache'
 
 group :test do
   gem "minitest-rails"
